@@ -15,14 +15,15 @@ const fetchBreedDescription = function(breedName, callback) {
       callback(error, null); //callback will console.log the desc or error into the terminal for the client. Using null as parameter because only error parameter applies to this if statement
       return;
     }
-
+    
     // STEP 6 - EDGE CASE: BREED NOT FOUND
     if (data.length === 0) {
       callback(`Your desired breed is not found.`); // Instead of placing arguments in here, this automatically gets run in the first parameter of callback. So it goes to 'error
       return;
-    } else {
+    } 
+    // Happy Path
       callback(null, data[0].description);
-    }
+    
   });
 };
 
