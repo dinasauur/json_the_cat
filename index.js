@@ -1,5 +1,5 @@
 
-const {fetchBreedDescription} = require('./breedFetcher');
+const { fetchBreedDescription } = require('./breedFetcher');
 
 // STEP 5 - Allow the user to specify the breed name using command-line arguments.
 const breedName = process.argv[2];
